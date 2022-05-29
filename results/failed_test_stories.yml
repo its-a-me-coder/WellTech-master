@@ -1,0 +1,13 @@
+version: "2.0"
+stories:
+- story: interactive_story_1 (data\stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_happy
+  - action: survey_form
+  - active_loop: survey_form
+  - action: utter_survey  # predicted: action_listen
+  - intent: affirm
+  - action: mh_survey
+  - active_loop: mh_survey

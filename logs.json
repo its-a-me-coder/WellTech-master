@@ -1,0 +1,49 @@
+2022-05-20 01:32:08,405 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2022-05-20 01:32:08,411 [INFO ]  Starting Rasa server on http://localhost:5005
+2022-05-20 01:32:08,413 [DEBUG]  Using the default number of Sanic workers (1).
+2022-05-20 01:32:08,422 [INFO ]  Loading model models\20220519-223904.tar.gz...
+2022-05-20 01:32:08,963 [DEBUG]  Extracted model to 'C:\Users\nitin\AppData\Local\Temp\tmp59anqecr'.
+2022-05-20 01:32:08,988 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2022-05-20 01:32:14,245 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2022-05-20 01:32:14,251 [INFO ]  Enabling coroutine debugging. Loop id 1931569832672.
+2022-05-20 01:32:14,254 [INFO ]  Loading model models\20220519-223904.tar.gz...
+2022-05-20 01:32:14,751 [DEBUG]  Extracted model to 'C:\Users\nitin\AppData\Local\Temp\tmpkgeg2ru0'.
+2022-05-20 01:32:14,965 [DEBUG]  Loading the model from C:\Users\nitin\AppData\Local\Temp\tmpkgeg2ru0\nlu\component_5_DIETClassifier.tf_model with finetune_mode=False...
+2022-05-20 01:32:15,082 [DEBUG]  Following metrics will be logged during training: 
+2022-05-20 01:32:15,084 [DEBUG]    t_loss (total loss)
+2022-05-20 01:32:15,085 [DEBUG]    i_acc (intent acc)
+2022-05-20 01:32:15,086 [DEBUG]    i_loss (intent loss)
+2022-05-20 01:32:15,087 [DEBUG]    e_f1 (entity f1)
+2022-05-20 01:32:15,088 [DEBUG]    e_loss (entity loss)
+2022-05-20 01:32:29,767 [DEBUG]  Finished loading the model.
+2022-05-20 01:32:29,773 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path 'C:\Users\nitin\AppData\Local\Temp\tmpkgeg2ru0\nlu' doesn't exist?
+2022-05-20 01:32:29,789 [DEBUG]  Connected to InMemoryTrackerStore.
+2022-05-20 01:32:29,790 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2022-05-20 01:32:30,297 [DEBUG]  Extracted model to 'C:\Users\nitin\AppData\Local\Temp\tmpzt4y8vao'.
+2022-05-20 01:32:30,856 [DEBUG]  Loading the model from C:\Users\nitin\AppData\Local\Temp\tmpzt4y8vao\core\policy_1_TEDPolicy\ted_policy.tf_model with finetune_mode=False...
+2022-05-20 01:32:40,632 [DEBUG]  Finished loading the model.
+2022-05-20 01:32:40,640 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2022-05-20 01:32:40,642 [INFO ]  Rasa server is up and running.

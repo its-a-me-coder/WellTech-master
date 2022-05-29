@@ -1,0 +1,44 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Activate mh_survey
+  steps:
+  - intent: health_survey
+  - action: mh_survey
+  - active_loop: mh_survey
+
+- rule: Activate survey_form
+  steps:
+  - intent: happiness_survey
+  - action: survey_form
+  - active_loop: survey_form
+
+- rule: Submit survey form
+  condition:
+  - active_loop: survey_form
+  steps:
+  - action: survey_form
+  - active_loop:  null
+  - action: action_submit_results
+  - action: utter_submit
+
+
+- rule: Submit mh_survey form
+  condition:
+  - active_loop: mh_survey
+  steps:
+  - action: mh_survey
+  - active_loop:  null
+  - action: action_submit_mhresults
+  - action: utter_submit

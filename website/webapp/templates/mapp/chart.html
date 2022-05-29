@@ -1,0 +1,7 @@
+{%extends 'base.html'%} {% load static %} {% block title %} mapp ranking
+{%endblock title %} {%block content%} {% autoescape off %} {{ plot_div }}
+{%endautoescape %}
+<div>
+  {% autoescape off %} {{ plot_div }} {% endautoescape %}
+</div>
+{%endblock content%} {%block scripts %} {%endblock scripts %}

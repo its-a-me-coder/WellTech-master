@@ -1,0 +1,54 @@
+{%extends 'base.html'%} {% load static %} {% block title%} {%endblock title %}
+{%block content%}
+<div class="col-9">
+  <div class="container">
+    <div class="row" style="margin-top: 6rem;">
+      <div class="col-6 offset-md-3">
+        <h3>Depression Survey Analysis:</h3>
+        <canvas id="depCanvas" width="552" height="24"></canvas>
+        <p style="font-size: 20px;">
+          You scored {{dep}} out of 24 on the depression survey provided by the
+          chatbot
+        </p>
+        <p style="font-size: 20px;">{{str_dep}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 offset-md-3" style="margin-top: 4rem;">
+        <h3>Anxiety Survey Analysis:</h3>
+        <canvas id="anxCanvas" width="552" height="24"></canvas>
+        <p style="font-size: 20px;">
+          You scored {{anx}} out of 24 on the anxiety survey provided by the
+          chatbot
+        </p>
+        <p style="font-size: 20px;">{{str_anx}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var c = document.getElementById("depCanvas");
+  var ctx = c.getContext("2d");
+  ctx.beginPath();
+  var dep = {{dep}}
+  var val1= dep/24
+  ctx.fillStyle = 'grey';
+  ctx.fillRect(0, 0,552, 24);
+  ctx.fillStyle = 'blue';
+  ctx.fillRect(0, 0, val1 * 552, 24);
+  ctx.stroke();
+</script>
+<script>
+  var c = document.getElementById("anxCanvas");
+  var ctx = c.getContext("2d");
+  ctx.beginPath();
+  var anx = {{anx}}
+  var val2= anx/24
+  ctx.fillStyle = 'grey';
+  ctx.fillRect(0, 0, 552, 24);
+  ctx.fillStyle = 'red';
+  ctx.fillRect(0, 0, val2 * 552, 24);
+  ctx.stroke();
+</script>
+
+{%endblock content%} {%block scripts %} {%endblock scripts %}

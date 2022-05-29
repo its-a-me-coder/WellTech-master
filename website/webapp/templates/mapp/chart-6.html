@@ -1,0 +1,26 @@
+{%extends 'base.html'%} {% load static %} {% block title %} mapp ranking
+{%endblock title %} {%block content%}
+<div class="col-9">
+  <div class="container">
+    {% autoescape off %} {{ plot_div }} {%endautoescape %}
+    <div style="width: 50; height: 50;">
+      {% autoescape off %} {{ plot_div }} {% endautoescape %}
+    </div>
+    <div style="width: 300; height: 300;">
+      {% autoescape off %} {{ plot_div2 }} {% endautoescape %}
+    </div>
+    <div style="width: 300; height: 300;">
+      {% autoescape off %} {{ plot_div3 }} {% endautoescape %}
+    </div>
+    <div style="width: 300; height: 300;">
+      {% autoescape off %} {{ plot_div4 }} {% endautoescape %}
+    </div>
+    <div style="width: 300; height: 300;">
+      {% autoescape off %} {{ plot_div5 }} {% endautoescape %}
+    </div>
+    <div style="width: 300; height: 300;">
+      {% autoescape off %} {{ plot_div6 }} {% endautoescape %}
+    </div>
+  </div>
+</div>
+{%endblock content%} {%block scripts %} {%endblock scripts %}

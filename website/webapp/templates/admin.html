@@ -1,0 +1,83 @@
+{%extends 'base.html'%} {% load static %} {% block title%} {%endblock title %}
+{%block content%}
+<div class="col-9">
+  <div class="container-fluid">
+    <div class="row mb-2" style="margin-top: 4rem;">
+      <div class="col-md-6">
+        <div
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Location</strong>
+            <h3 class="mb-0">Geographic statistics and analysis</h3>
+            <div class="mb-1 text-muted">Updated Today</div>
+            <p class="card-text mb-auto">
+              Contains Geographic analysis of data , keeps updating
+              periodically.
+            </p>
+            <a href="/country_view" class="stretched-link">Click here to see</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Gender</strong>
+            <h3 class="mb-0">Gender and Identity diversity Analysis</h3>
+            <div class="mb-1 text-muted">Updated Today</div>
+            <p class="card-text mb-auto">
+              Contains analysis of Identity data , keeps updating periodically.
+            </p>
+            <a href="/gender_view" class="stretched-link">Click here to see</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary"
+              >Mental Health</strong
+            >
+            <h3 class="mb-0">Mental Health past analysis</h3>
+            <div class="mb-1 text-muted">Updated Today</div>
+            <p class="card-text mb-auto">
+              Contains historic data of employees and their past mental health
+              statistics
+            </p>
+            <a href="/MHstatusNOW_view" class="stretched-link"
+              >Click here to see</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div
+          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        >
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary"
+              >Mental Health</strong
+            >
+            <h3 class="mb-0">Mental Health Present Analysis</h3>
+            <div class="mb-1 text-muted">Updated Today</div>
+            <p class="card-text mb-auto">
+              Contains present status of mental health and averages of employees
+              , keeps updating periodically.
+            </p>
+            <a href="/MHstatusPAST_view" class="stretched-link"
+              >Click here to see</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock content%} {%block scripts %} {%endblock scripts %}
